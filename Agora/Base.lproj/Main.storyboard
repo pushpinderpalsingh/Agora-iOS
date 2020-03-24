@@ -19,8 +19,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="267"/>
                                 <subviews>
                                     <searchBar clipsSubviews="YES" contentMode="scaleAspectFit" barStyle="black" searchBarStyle="minimal" text="Search" translatesAutoresizingMaskIntoConstraints="NO" id="XKr-Qu-PWO">
-                                        <rect key="frame" x="8" y="40" width="346" height="56"/>
+                                        <rect key="frame" x="16" y="52" width="326" height="56"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" red="1" green="0.99998801950000005" blue="1" alpha="0.66086647730000003" colorSpace="custom" customColorSpace="displayP3"/>
                                         <offsetWrapper key="searchTextPositionAdjustment" horizontal="5" vertical="0.0"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <scopeButtonTitles>
@@ -28,23 +29,28 @@
                                         </scopeButtonTitles>
                                     </searchBar>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emk-zj-Ndc">
-                                        <rect key="frame" x="8" y="157" width="60.5" height="31"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="31" id="Ctm-3o-R8E"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                        <rect key="frame" x="16" y="165.5" width="73.5" height="25.5"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7h-7Q-uuq" userLabel="plus">
+                                        <rect key="frame" x="351" y="52.5" width="55" height="55"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.89061439040000001" green="0.90906310079999997" blue="0.95686978099999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" backgroundImage="circle.fill" catalog="system">
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="emk-zj-Ndc" firstAttribute="leading" secondItem="XKr-Qu-PWO" secondAttribute="leading" id="6fw-eE-1S2"/>
-                                    <constraint firstAttribute="trailing" secondItem="XKr-Qu-PWO" secondAttribute="trailing" constant="60" id="H12-db-mDG"/>
-                                    <constraint firstItem="emk-zj-Ndc" firstAttribute="leading" secondItem="PyL-P4-dMV" secondAttribute="leadingMargin" id="bSv-mX-XKH"/>
+                                    <constraint firstItem="XKr-Qu-PWO" firstAttribute="top" secondItem="PyL-P4-dMV" secondAttribute="topMargin" id="GTU-eK-TKX"/>
+                                    <constraint firstAttribute="trailing" secondItem="XKr-Qu-PWO" secondAttribute="trailing" constant="72" id="I5o-rB-VCa"/>
+                                    <constraint firstItem="emk-zj-Ndc" firstAttribute="leading" secondItem="PyL-P4-dMV" secondAttribute="leadingMargin" constant="8" id="bSv-mX-XKH"/>
+                                    <constraint firstItem="XKr-Qu-PWO" firstAttribute="leading" secondItem="emk-zj-Ndc" secondAttribute="leading" id="hrp-5Q-ZML"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="emk-zj-Ndc" secondAttribute="trailing" constant="20" symbolic="YES" id="nSa-3M-674"/>
-                                    <constraint firstItem="emk-zj-Ndc" firstAttribute="top" secondItem="XKr-Qu-PWO" secondAttribute="bottom" constant="61" id="oeV-lQ-59k"/>
-                                    <constraint firstAttribute="bottom" secondItem="emk-zj-Ndc" secondAttribute="bottom" constant="79" id="xDA-Zr-6nx"/>
+                                    <constraint firstAttribute="bottom" secondItem="emk-zj-Ndc" secondAttribute="bottom" constant="76" id="xDA-Zr-6nx"/>
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L4b-1b-1Nm" userLabel="Result Scroll">
@@ -93,35 +99,41 @@
                                 <rect key="frame" x="0.0" y="814" width="414" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xje-E9-kbG">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xje-E9-kbG" userLabel="Home">
                                         <rect key="frame" x="73" y="22" width="39" height="37"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" red="0.6246115565" green="0.68072694540000001" blue="0.78040552139999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" backgroundImage="house" catalog="system">
                                             <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gO8-Fa-EQQ">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gO8-Fa-EQQ" userLabel="Profile">
                                         <rect key="frame" x="301" y="23.5" width="37" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" red="0.60007464889999995" green="0.60777336360000001" blue="0.61176580189999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" backgroundImage="person" catalog="system"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7i-sy-4g1">
-                                        <rect key="frame" x="172" y="-30.5" width="71" height="70"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcf-yX-tmB" userLabel="plus">
+                                        <rect key="frame" x="159" y="-40.5" width="97" height="97"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" red="0.89061439040000001" green="0.90906310079999997" blue="0.95686978099999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" backgroundImage="circle.fill" catalog="system"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W7i-Ft-H2b">
-                                        <rect key="frame" x="184" y="-17" width="46" height="43"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7i-sy-4g1" userLabel="plus">
+                                        <rect key="frame" x="178" y="-22" width="58" height="59"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" red="0.96239489320000005" green="0.82445520159999997" blue="0.2939507663" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" backgroundImage="circle.fill" catalog="system"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W7i-Ft-H2b" userLabel="plus">
+                                        <rect key="frame" x="190" y="-9" width="34" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.99328859060402686" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" backgroundImage="plus" catalog="system"/>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.96882289649999997" green="0.98008054489999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
