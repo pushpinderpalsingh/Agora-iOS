@@ -48,11 +48,13 @@ class ViewController: UIViewController {
     }
     //MARK: - Data view Method
     func updateView(){
-        var e = elections.count - 1
-     while(e>=0){
-            ElectionName[e].text = elections[e].name
-            desc[e].text = elections[e].desc
-        e-=1
+        var array = 0
+        var electionName = elections.count - 1
+        while(array<=ElectionName.count - 1 && electionName>=0){
+        ElectionName[array].text = elections[electionName].name
+            desc[array].text = elections[electionName].desc
+            array += 1
+            electionName -= 1
         }
     }
     
