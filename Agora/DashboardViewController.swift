@@ -21,18 +21,38 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
-        
+        load()
     }
     
     @IBAction func add(_ sender: UIButton) {
-        
+        var nameTextField = UITextField()
+        var descTextField = UITextField()
+        let alert = UIAlertController(title: "Create new", message: "", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Create New", style: .default) { (action) in
+            
+            let newElection = Election(context: self.context)
+            newElection.name = nameTextField.text!
+            newElection.desc = descTextField.text!
+            self.save()
+        }
+       alert.addTextField { (alertText) in
+                  alertText.placeholder = "Add the Name of the Election"
+                  nameTextField = alertText
+              }
+              alert.addTextField { (alertText) in
+                 alertText.placeholder = "Add Some Desc"
+                  descTextField = alertText
+        }
+                  alert.addAction(action)
+                  present(alert,animated: true,completion: nil)
     }
     //MARK: - Data view Method
     func updateView(){
-        let e = ElectionName.count
-        for i in ElectionName!.count{
-            i.text = elections[i].name
-            desc[i].text = elections[ i].desc
+        var e = elections.count - 1
+     while(e>=0){
+            ElectionName[e].text = elections[e].name
+            desc[e].text = elections[e].desc
+        e-=1
         }
     }
     
@@ -45,6 +65,7 @@ class ViewController: UIViewController {
         }catch{
             print("Error\(error)")
         }
+        load()
     }
     func load(){
         let request : NSFetchRequest<Election> = Election.fetchRequest()
@@ -54,6 +75,6 @@ class ViewController: UIViewController {
             print("Elections \(error)")
         }
         updateView()
-    }
+   }
 }
 
