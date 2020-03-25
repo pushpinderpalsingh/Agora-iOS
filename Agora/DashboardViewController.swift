@@ -17,9 +17,25 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
     }
 
-
+//MARK: - Data Methods
+    
+    func save(){
+        do{
+            try context.save()
+        }catch{
+            print("Error\(error)")
+        }
+    }
+    func load(){
+        let request : NSFetchRequest<Election> = Election.fetchRequest()
+        do{
+            elections = try context.fetch(request)
+        }catch{
+            print("Elections \(error)")
+        }
+    }
 }
 
