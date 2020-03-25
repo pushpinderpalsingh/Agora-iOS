@@ -642,6 +642,9 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" red="0.99328859060402686" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" backgroundImage="plus" catalog="system"/>
+                                        <connections>
+                                            <action selector="add:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vfg-NW-oho"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.96882289649999997" green="0.98008054489999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -664,6 +667,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outletCollection property="ElectionName" destination="8Yx-j7-URX" collectionClass="NSMutableArray" id="6Nj-cN-frx"/>
+                        <outletCollection property="ElectionName" destination="1bE-BC-XZo" collectionClass="NSMutableArray" id="aVk-Md-yei"/>
+                        <outletCollection property="ElectionName" destination="gv0-SZ-DXX" collectionClass="NSMutableArray" id="oJL-Na-ZG3"/>
+                        <outletCollection property="ElectionName" destination="Iic-zI-cTn" collectionClass="NSMutableArray" id="7kG-Bp-df3"/>
+                        <outletCollection property="ElectionName" destination="IhE-TE-kjj" collectionClass="NSMutableArray" id="U6c-gd-CG7"/>
+                        <outletCollection property="desc" destination="x32-pV-8VE" collectionClass="NSMutableArray" id="yyM-yu-kFu"/>
+                        <outletCollection property="desc" destination="5qL-dX-QIa" collectionClass="NSMutableArray" id="Xb1-oQ-dvg"/>
+                        <outletCollection property="desc" destination="n8R-bD-Vkh" collectionClass="NSMutableArray" id="h6K-0q-qn0"/>
+                        <outletCollection property="desc" destination="FOK-su-AUA" collectionClass="NSMutableArray" id="AMb-SQ-91b"/>
+                        <outletCollection property="desc" destination="QKt-Y5-us9" collectionClass="NSMutableArray" id="dnp-sk-qh5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

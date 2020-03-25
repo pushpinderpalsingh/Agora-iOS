@@ -15,10 +15,27 @@ class ViewController: UIViewController {
 
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
+    @IBOutlet var ElectionName: [UILabel]!
+    @IBOutlet var desc: [UILabel]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+        
     }
+    
+    @IBAction func add(_ sender: UIButton) {
+        
+    }
+    //MARK: - Data view Method
+    func updateView(){
+        let e = ElectionName.count
+        for i in ElectionName!.count{
+            i.text = elections[i].name
+            desc[i].text = elections[ i].desc
+        }
+    }
+    
 
 //MARK: - Data Methods
     
@@ -36,6 +53,7 @@ class ViewController: UIViewController {
         }catch{
             print("Elections \(error)")
         }
+        updateView()
     }
 }
 
