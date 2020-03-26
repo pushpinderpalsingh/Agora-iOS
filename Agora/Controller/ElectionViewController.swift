@@ -11,7 +11,11 @@ import UIKit
 class ElectionViewController : UIViewController {
     @IBOutlet weak var ElectionName: UILabel!
     @IBOutlet weak var desc: UILabel!
+    var nameString : String = ""
+    var descString = ""
     override func viewDidLoad() {
         super.viewDidLoad()
+        ElectionName.text = nameString
+        desc.text = descString
     }
 }

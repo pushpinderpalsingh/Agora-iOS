@@ -12,7 +12,7 @@ import CoreData
 class ViewController: UIViewController {
     
     var elections = [Election]()
-
+    var electionNumber = 0
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     @IBOutlet var ElectionName: [UILabel]!
@@ -45,6 +45,16 @@ class ViewController: UIViewController {
         }
                   alert.addAction(action)
                   present(alert,animated: true,completion: nil)
+    }
+    @IBAction func button1Pressed(_ sender: UIButton) {
+        electionNumber = Int(sender.titleLabel!.text!)!
+        print(electionNumber)
+        performSegue(withIdentifier: "election", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! ElectionViewController
+        destinationVC.nameString = elections[elections.count - electionNumber - 1].name!
+        destinationVC.descString = elections[elections.count - electionNumber - 1].desc!
     }
     //MARK: - Data view Method
     func updateView(){
