@@ -371,6 +371,10 @@
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" red="0.20568644999999999" green="0.6141534448" blue="0.39212399720000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fv-Bm-27V">
+                                                        <rect key="frame" x="0.0" y="0.0" width="358" height="189"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </view>
@@ -624,9 +628,6 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" red="0.81262937606197105" green="0.82664154431852177" blue="0.83777462452177021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" backgroundImage="person" catalog="system"/>
-                                        <connections>
-                                            <segue destination="B0J-3P-nPT" kind="show" id="b6R-wZ-ahW"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcf-yX-tmB" userLabel="plus">
                                         <rect key="frame" x="159" y="-40.5" width="97" height="97"/>
@@ -682,6 +683,7 @@
                         <outletCollection property="desc" destination="n8R-bD-Vkh" collectionClass="NSMutableArray" id="h6K-0q-qn0"/>
                         <outletCollection property="desc" destination="FOK-su-AUA" collectionClass="NSMutableArray" id="AMb-SQ-91b"/>
                         <outletCollection property="desc" destination="QKt-Y5-us9" collectionClass="NSMutableArray" id="dnp-sk-qh5"/>
+                        <segue destination="B0J-3P-nPT" kind="show" identifier="election" id="Agu-KY-yl7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -691,11 +693,37 @@
         <!--Elections View Controller-->
         <scene sceneID="iUb-2F-uS0">
             <objects>
-                <viewController id="B0J-3P-nPT" userLabel="Elections View Controller" sceneMemberID="viewController">
+                <viewController id="B0J-3P-nPT" userLabel="Elections View Controller" customClass="ElectionViewController" customModule="Agora" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eqV-Nc-jlI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eK5-Ih-dR6" userLabel="Bottom">
+                                <rect key="frame" x="0.0" y="353" width="414" height="472"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ok4-E1-FKr">
+                                        <rect key="frame" x="38" y="57" width="338" height="55"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Candidate"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o0J-zP-fAw">
+                                        <rect key="frame" x="125" y="203" width="165" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.23219293360000001" green="0.52359712120000002" blue="0.33722722529999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Submit">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DN4-2m-BuK">
+                                        <rect key="frame" x="38" y="129" width="338" height="55"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Candidate"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.96239489320000005" green="0.82445520159999997" blue="0.2939507663" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eb7-i6-LwY" userLabel="Top">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="355"/>
                                 <subviews>
@@ -772,39 +800,6 @@
                                     <constraint firstItem="Oij-45-oH5" firstAttribute="leading" secondItem="eb7-i6-LwY" secondAttribute="leading" constant="8" id="wGg-pv-rDI"/>
                                     <constraint firstItem="GhW-kg-ACc" firstAttribute="leading" secondItem="eb7-i6-LwY" secondAttribute="leading" constant="321" id="yZa-ta-BvV"/>
                                 </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Election Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6x9-IU-BGB">
-                                <rect key="frame" x="10" y="10" width="111" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eK5-Ih-dR6" userLabel="Bottom">
-                                <rect key="frame" x="0.0" y="353" width="414" height="472"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ok4-E1-FKr">
-                                        <rect key="frame" x="38" y="17" width="338" height="55"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Candidate"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DN4-2m-BuK">
-                                        <rect key="frame" x="38" y="100" width="338" height="55"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Candidate"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o0J-zP-fAw">
-                                        <rect key="frame" x="125" y="184" width="165" height="49"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.23219293360000001" green="0.52359712120000002" blue="0.33722722529999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="Submit">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.96239489320000005" green="0.82445520159999997" blue="0.2939507663" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="46o-Xd-hAi">
                                 <rect key="frame" x="0.0" y="614" width="414" height="248"/>
