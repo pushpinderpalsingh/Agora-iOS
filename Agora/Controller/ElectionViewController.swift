@@ -9,6 +9,8 @@
 import UIKit
 
 class ElectionViewController : UIViewController {
+    @IBOutlet weak var ElectionName: UILabel!
+    @IBOutlet weak var desc: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
     }

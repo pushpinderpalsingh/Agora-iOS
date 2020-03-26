@@ -329,6 +329,14 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G9n-gF-yjN" userLabel="Election View">
                                                 <rect key="frame" x="8" y="8" width="358" height="189"/>
                                                 <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fv-Bm-27V">
+                                                        <rect key="frame" x="0.0" y="0.0" width="358" height="189"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="1"/>
+                                                        <connections>
+                                                            <segue destination="B0J-3P-nPT" kind="show" id="jgX-Bc-ImE"/>
+                                                        </connections>
+                                                    </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hF-P8-Ynm" userLabel="plus">
                                                         <rect key="frame" x="8" y="147.5" width="33" height="33"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -361,6 +369,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x32-pV-8VE">
                                                         <rect key="frame" x="16" y="64" width="334" height="75"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <string key="text">Description :Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <nil key="textColor"/>
@@ -371,10 +380,6 @@
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" red="0.20568644999999999" green="0.6141534448" blue="0.39212399720000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fv-Bm-27V">
-                                                        <rect key="frame" x="0.0" y="0.0" width="358" height="189"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </view>
@@ -683,7 +688,6 @@
                         <outletCollection property="desc" destination="n8R-bD-Vkh" collectionClass="NSMutableArray" id="h6K-0q-qn0"/>
                         <outletCollection property="desc" destination="FOK-su-AUA" collectionClass="NSMutableArray" id="AMb-SQ-91b"/>
                         <outletCollection property="desc" destination="QKt-Y5-us9" collectionClass="NSMutableArray" id="dnp-sk-qh5"/>
-                        <segue destination="B0J-3P-nPT" kind="show" identifier="election" id="Agu-KY-yl7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -990,6 +994,10 @@
                         <viewLayoutGuide key="safeArea" id="gqu-hw-aq4"/>
                     </view>
                     <navigationItem key="navigationItem" id="28w-Hk-FAc"/>
+                    <connections>
+                        <outlet property="ElectionName" destination="Qvi-La-k3f" id="RGo-pf-hEB"/>
+                        <outlet property="desc" destination="BsG-S7-trW" id="jku-ec-6fy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IVe-Ic-ZH6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
