@@ -9,23 +9,25 @@
 /* Begin PBXBuildFile section */
 		FF91D9D9242946A1001F4FA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF91D9D8242946A1001F4FA0 /* AppDelegate.swift */; };
 		FF91D9DB242946A1001F4FA0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF91D9DA242946A1001F4FA0 /* SceneDelegate.swift */; };
-		FF91D9DD242946A1001F4FA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF91D9DC242946A1001F4FA0 /* ViewController.swift */; };
+		FF91D9DD242946A1001F4FA0 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF91D9DC242946A1001F4FA0 /* DashboardViewController.swift */; };
 		FF91D9E0242946A1001F4FA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF91D9DE242946A1001F4FA0 /* Main.storyboard */; };
 		FF91D9E3242946A1001F4FA0 /* Agora.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF91D9E1242946A1001F4FA0 /* Agora.xcdatamodeld */; };
 		FF91D9E5242946A3001F4FA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF91D9E4242946A3001F4FA0 /* Assets.xcassets */; };
 		FF91D9E8242946A3001F4FA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF91D9E6242946A3001F4FA0 /* LaunchScreen.storyboard */; };
+		FFBF5DC7242CB5F300146297 /* ElectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBF5DC6242CB5F300146297 /* ElectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FF91D9D5242946A1001F4FA0 /* Agora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Agora.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF91D9D8242946A1001F4FA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF91D9DA242946A1001F4FA0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FF91D9DC242946A1001F4FA0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FF91D9DC242946A1001F4FA0 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		FF91D9DF242946A1001F4FA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FF91D9E2242946A1001F4FA0 /* Agora.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Agora.xcdatamodel; sourceTree = "<group>"; };
 		FF91D9E4242946A3001F4FA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF91D9E7242946A3001F4FA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF91D9E9242946A3001F4FA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFBF5DC6242CB5F300146297 /* ElectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,14 +62,31 @@
 			children = (
 				FF91D9D8242946A1001F4FA0 /* AppDelegate.swift */,
 				FF91D9DA242946A1001F4FA0 /* SceneDelegate.swift */,
-				FF91D9DC242946A1001F4FA0 /* ViewController.swift */,
-				FF91D9DE242946A1001F4FA0 /* Main.storyboard */,
+				FFBF5DC8242CB60800146297 /* Controller */,
+				FFBF5DC9242CB61D00146297 /* View */,
 				FF91D9E4242946A3001F4FA0 /* Assets.xcassets */,
 				FF91D9E6242946A3001F4FA0 /* LaunchScreen.storyboard */,
 				FF91D9E9242946A3001F4FA0 /* Info.plist */,
 				FF91D9E1242946A1001F4FA0 /* Agora.xcdatamodeld */,
 			);
 			path = Agora;
+			sourceTree = "<group>";
+		};
+		FFBF5DC8242CB60800146297 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FF91D9DC242946A1001F4FA0 /* DashboardViewController.swift */,
+				FFBF5DC6242CB5F300146297 /* ElectionViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FFBF5DC9242CB61D00146297 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FF91D9DE242946A1001F4FA0 /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,7 +161,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF91D9E3242946A1001F4FA0 /* Agora.xcdatamodeld in Sources */,
-				FF91D9DD242946A1001F4FA0 /* ViewController.swift in Sources */,
+				FFBF5DC7242CB5F300146297 /* ElectionViewController.swift in Sources */,
+				FF91D9DD242946A1001F4FA0 /* DashboardViewController.swift in Sources */,
 				FF91D9D9242946A1001F4FA0 /* AppDelegate.swift in Sources */,
 				FF91D9DB242946A1001F4FA0 /* SceneDelegate.swift in Sources */,
 			);
